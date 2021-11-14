@@ -1,0 +1,232 @@
+[
+  {
+    "_id": "6183c8addc413be2359513c4",
+    "name": "accent chair",
+    "slug": "accent-chair",
+    "price": 25,
+    "featured": false,
+    "rating": 4,
+    "company": "marcos",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513c5",
+    "name": "albany sectional",
+    "slug": "albany-sectional",
+    "price": 109,
+    "featured": false,
+    "rating": 5,
+    "company": "liddy",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513c6",
+    "name": "albany table",
+    "slug": "albany-table",
+    "price": 309,
+    "featured": false,
+    "rating": 4.9,
+    "company": "liddy",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513c7",
+    "name": "armchair",
+    "slug": "armchair",
+    "price": 125,
+    "featured": false,
+    "rating": 4.8,
+    "company": "marcos",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513c8",
+    "name": "bar stool",
+    "slug": "bar-stool",
+    "price": 40,
+    "featured": false,
+    "rating": 4.6,
+    "company": "liddy",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513c9",
+    "name": "dining table",
+    "slug": "dining-table",
+    "price": 42,
+    "featured": false,
+    "rating": 4.55,
+    "company": "ikea",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513ca",
+    "name": "emperor bed",
+    "slug": "emperor-bed",
+    "price": 23,
+    "featured": false,
+    "rating": 4.5,
+    "company": "ikea",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513cb",
+    "name": "entertainment center",
+    "slug": "entertainment-center",
+    "price": 59,
+    "featured": true,
+    "rating": 4.5,
+    "company": "caressa",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513cc",
+    "name": "high-back bench",
+    "slug": "high-back-bench",
+    "price": 39,
+    "featured": true,
+    "rating": 4.5,
+    "company": "ikea",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513cd",
+    "name": "leather sofa",
+    "slug": "leather-sofa",
+    "price": 99,
+    "featured": false,
+    "rating": 4.5,
+    "company": "caressa",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513ce",
+    "name": "modern bookshelf",
+    "slug": "modern-bookshelf",
+    "price": 31,
+    "featured": true,
+    "rating": 4.5,
+    "company": "caressa",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513cf",
+    "name": "modern poster",
+    "slug": "modern-poster",
+    "price": 30,
+    "featured": false,
+    "rating": 4.5,
+    "company": "liddy",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d0",
+    "name": "shelf",
+    "slug": "shelf",
+    "price": 30,
+    "featured": false,
+    "rating": 4.5,
+    "company": "ikea",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d1",
+    "name": "simple chair",
+    "slug": "simple-chair",
+    "price": 109,
+    "featured": false,
+    "rating": 4.5,
+    "company": "liddy",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d2",
+    "name": "sofa set",
+    "slug": "sofa-set",
+    "price": 129,
+    "featured": false,
+    "rating": 4.5,
+    "company": "marcos",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d3",
+    "name": "suede armchair",
+    "slug": "suede-armchair",
+    "price": 15,
+    "featured": false,
+    "rating": 4.5,
+    "company": "caressa",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d4",
+    "name": "utopia sofa",
+    "slug": "utopia-sofa",
+    "price": 79,
+    "featured": true,
+    "rating": 4.5,
+    "company": "liddy",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d5",
+    "name": "vase table",
+    "slug": "vase-table",
+    "price": 120,
+    "featured": true,
+    "rating": 4.5,
+    "company": "marcos",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d6",
+    "name": "wooden bed",
+    "slug": "wooden-bed",
+    "price": 25,
+    "featured": false,
+    "rating": 4.5,
+    "company": "ikea",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d7",
+    "name": "wooden desk",
+    "slug": "wooden-desk",
+    "price": 15,
+    "featured": false,
+    "rating": 4.5,
+    "company": "ikea",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d8",
+    "name": "wooden desk",
+    "slug": "wooden-desk-2",
+    "price": 40,
+    "featured": false,
+    "rating": 4.5,
+    "company": "ikea",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513d9",
+    "name": "wooden table",
+    "slug": "wooden-table",
+    "price": 23,
+    "featured": true,
+    "rating": 4.5,
+    "company": "caressa",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  },
+  {
+    "_id": "6183c8addc413be2359513da",
+    "name": "a first wooden table",
+    "slug": "a-first-wooden-table",
+    "price": 23,
+    "featured": true,
+    "rating": 4.5,
+    "company": "caressa",
+    "createdAt": "2021-11-04T11:49:01.475Z"
+  }
+]

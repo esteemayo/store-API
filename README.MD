@@ -1,0 +1,3 @@
+# Store-API
+
+Built with moden technologies: NodeJS, Express.js, MongoDB, Mongoose and more...
