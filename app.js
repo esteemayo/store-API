@@ -27,14 +27,14 @@ app.use(helmet());
 
 // development logging
 if (app.get('env') === 'development') {
-    app.use(morgan('dev'));
+  app.use(morgan('dev'));
 }
 
 // limit request from same API
 const limiter = rateLimit({
-    max: 100,
-    windowMs: 60 * 60 * 1000,
-    message: 'Too many requests from this IP, Please try again in an hour!',
+  max: 100,
+  windowMs: 60 * 60 * 1000,
+  message: 'Too many requests from this IP, Please try again in an hour!',
 });
 
 app.use('/api', limiter);
@@ -49,30 +49,26 @@ app.use(mongoSanitize());
 app.use(xss());
 
 // prevent parameter pollution
-app.use(hpp({
-    whitelist: [
-        'name',
-        'price',
-        'rating',
-        'company',
-        'featured',
-    ],
-}));
+app.use(
+  hpp({
+    whitelist: ['name', 'price', 'rating', 'company', 'featured'],
+  })
+);
 
 // compression middleware
 app.use(compression());
 
 // test middleware
 app.use((req, res, next) => {
-    req.requestTime = new Date().toISOString();
-    next();
+  req.requestTime = new Date().toISOString();
+  next();
 });
 
 // api routes
 app.use('/api/v1/products', products);
 
 app.all('*', (req, res, next) => {
-    next(new NotFoundError(`Can't find ${req.originalUrl} on this server`));
+  next(new NotFoundError(`Can't find ${req.originalUrl} on this server`));
 });
 
 app.use(globalErrorHandler);
