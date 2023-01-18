@@ -1,8 +1,8 @@
-const { StatusCodes } = require('http-status-codes');
+import { StatusCodes } from 'http-status-codes';
 
-const Product = require('../models/Product');
-const catchError = require('../utils/catchError');
-const NotFoundError = require('../errors/notFound');
+import Product from '../models/Product.js';
+import NotFoundError from '../errors/notFound.js';
+import catchError from '../utils/catchError.js';
 
 exports.getAllProducts = catchError(async (req, res, next) => {
   const { name, featured, sort, fields, numericFilter } = req.query;
