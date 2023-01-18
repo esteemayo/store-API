@@ -4,7 +4,7 @@ import catchError from '../utils/catchError.js';
 import APIFeatures from '../utils/apiFeatures.js';
 import NotFoundError from '../errors/notFound.js';
 
-exports.getAll = (Model) =>
+export const getAll = (Model) =>
   catchError(async (req, res, next) => {
     const features = new APIFeatures(Model.find(), req.query)
       .filter()
@@ -22,7 +22,7 @@ exports.getAll = (Model) =>
     });
   });
 
-exports.getOneById = (Model) =>
+export const getOneById = (Model) =>
   catchError(async (req, res, next) => {
     const { id: docID } = req.params;
 
@@ -40,7 +40,7 @@ exports.getOneById = (Model) =>
     });
   });
 
-exports.getOneBySlug = (Model) =>
+export const getOneBySlug = (Model) =>
   catchError(async (req, res, next) => {
     const { slug } = req.params;
 
@@ -58,7 +58,7 @@ exports.getOneBySlug = (Model) =>
     });
   });
 
-exports.createOne = (Model) =>
+export const createOne = (Model) =>
   catchError(async (req, res, next) => {
     const doc = await Model.create({ ...req.body });
 
@@ -68,7 +68,7 @@ exports.createOne = (Model) =>
     });
   });
 
-exports.updateOne = (Model) =>
+export const updateOne = (Model) =>
   catchError(async (req, res, next) => {
     const { id: docID } = req.params;
 
@@ -89,7 +89,7 @@ exports.updateOne = (Model) =>
     });
   });
 
-exports.deleteOne = (Model) =>
+export const deleteOne = (Model) =>
   catchError(async (req, res, next) => {
     const { id: docID } = req.params;
 
@@ -106,3 +106,14 @@ exports.deleteOne = (Model) =>
       doc: null,
     });
   });
+
+const factory = {
+  getAll,
+  getOneById,
+  getOneBySlug,
+  createOne,
+  updateOne,
+  deleteOne,
+};
+
+export default factory;
