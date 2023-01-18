@@ -5,7 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import 'colors';
 
-// model
+import connectDB from '../../config/db.js';
 import Product from '../../models/Product.js';
 
 dotenv.config({ path: './config.env' });
@@ -13,22 +13,8 @@ dotenv.config({ path: './config.env' });
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// db local
-const db = process.env.DATABASE_LOCAL;
-
-// atlas mongo uri
-const mongouri = process.env.DATABASE.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD
-);
-
 // MongoDB connection
-mongoose
-  .connect(mongouri)
-  .then(() => console.log(`Connected to MongoDB → ${mongouri}`.gray.bold))
-  .catch((err) =>
-    console.log(`Could not connect to MongoDB → ${err}`.red.bold)
-  );
+connectDB();
 
 // read JSON file
 const products = JSON.parse(
