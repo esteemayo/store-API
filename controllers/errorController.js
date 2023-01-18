@@ -1,4 +1,4 @@
-const { StatusCodes } = require('http-status-codes');
+import { StatusCodes } from 'http-status-codes';
 
 const handleCastErrorDB = (customError, err) => {
   customError.message = `Invalid ${err.path}: ${err.value}`;
@@ -18,19 +18,19 @@ const handleValidationErrorDB = (customError, err) => {
 };
 
 const sendErrorDev = (err, res) => {
-  return res.status(err.statusCode).json({
+  res.status(err.statusCode).json({
     message: err.message,
     stack: err.stack,
   });
 };
 
 const sendErrorProd = (err, res) => {
-  return res.status(err.statusCode).json({
+  res.status(err.statusCode).json({
     message: err.message,
   });
 };
 
-module.exports = (err, req, res, next) => {
+const globalErrorHandler = (err, req, res, next) => {
   const customError = {
     statusCode: err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR,
     message:
@@ -48,3 +48,5 @@ module.exports = (err, req, res, next) => {
     sendErrorProd(customError, res);
   }
 };
+
+export default globalErrorHandler;
