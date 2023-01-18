@@ -7,11 +7,14 @@ import morgan from 'morgan';
 import xss from 'xss-clean';
 import cors from 'cors';
 import hpp from 'hpp';
+import dotenv from 'dotenv';
 
 // routes
 import products from './routes/products.js';
 import NotFoundError from './errors/notFound.js';
 import globalErrorHandler from './controllers/errorController.js';
+
+dotenv.config({ path: './config.env' });
 
 // start express app
 const app = express();
