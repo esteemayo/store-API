@@ -17,18 +17,16 @@ const handleValidationErrorDB = (customError, err) => {
   customError.statusCode = StatusCodes.BAD_REQUEST;
 };
 
-const sendErrorDev = (err, res) => {
+const sendErrorDev = (err, res) =>
   res.status(err.statusCode).json({
     message: err.message,
     stack: err.stack,
   });
-};
 
-const sendErrorProd = (err, res) => {
+const sendErrorProd = (err, res) =>
   res.status(err.statusCode).json({
     message: err.message,
   });
-};
 
 const globalErrorHandler = (err, req, res, next) => {
   const customError = {
