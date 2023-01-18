@@ -10,6 +10,9 @@ import Product from '../../models/Product.js';
 
 dotenv.config({ path: './config.env' });
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // db local
 const db = process.env.DATABASE_LOCAL;
 
