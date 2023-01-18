@@ -12,7 +12,7 @@ const dbLocal = DATABASE_LOCAL;
 // atlas mongo uri
 const mongoURI = DATABASE.replace('<PASSWORD>', DATABASE_PASSWORD);
 
-const sb = devEnv ? dbLocal : mongoURI;
+const db = devEnv ? dbLocal : mongoURI;
 
 const connectDB = async () => {
   try {
@@ -24,7 +24,7 @@ const connectDB = async () => {
 };
 
 mongoose.connection.on('disconnected', () => {
-  console.log('MongoDB disconnected'.yellow.bold);
+  console.log('MongoDB disconnected'.strikethrough);
 });
 
 export default connectDB;
