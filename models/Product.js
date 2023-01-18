@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const slugify = require('slugify');
+import slugify from 'slugify';
+import mongoose from 'mongoose';
 
 const productSchema = new mongoose.Schema({
   name: {
@@ -51,4 +51,4 @@ productSchema.pre('save', async function (next) {
 
 const Product = mongoose.model('Product', productSchema);
 
-module.exports = Product;
+export default Product;
