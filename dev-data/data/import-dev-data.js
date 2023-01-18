@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const fs = require('fs');
-require('colors');
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import fs from 'fs';
+import 'colors';
 
 // model
-const Product = require('../../models/Product');
+import Product from '../../models/Product.js';
 
 dotenv.config({ path: './config.env' });
 
