@@ -4,7 +4,7 @@ import Product from '../models/Product.js';
 import NotFoundError from '../errors/notFound.js';
 import catchError from '../utils/catchError.js';
 
-exports.getAllProducts = catchError(async (req, res, next) => {
+export const getAllProducts = catchError(async (req, res, next) => {
   const { name, featured, sort, fields, numericFilter } = req.query;
   const queryObj = {};
 
@@ -80,7 +80,7 @@ exports.getAllProducts = catchError(async (req, res, next) => {
   });
 });
 
-exports.getProductById = catchError(async (req, res, next) => {
+export const getProductById = catchError(async (req, res, next) => {
   const { id: prodID } = req.params;
 
   const product = await Product.findById(prodID);
@@ -95,7 +95,7 @@ exports.getProductById = catchError(async (req, res, next) => {
   });
 });
 
-exports.getProductBySlug = catchError(async (req, res, next) => {
+export const getProductBySlug = catchError(async (req, res, next) => {
   const { slug } = req.params;
 
   const product = await Product.findOne({ slug: slug });
@@ -110,7 +110,7 @@ exports.getProductBySlug = catchError(async (req, res, next) => {
   });
 });
 
-exports.createProduct = catchError(async (req, res, next) => {
+export const createProduct = catchError(async (req, res, next) => {
   const product = await Product.create({ ...req.body });
 
   res.status(StatusCodes.CREATED).json({
@@ -119,7 +119,7 @@ exports.createProduct = catchError(async (req, res, next) => {
   });
 });
 
-exports.updateProduct = catchError(async (req, res, next) => {
+export const updateProduct = catchError(async (req, res, next) => {
   const { id: prodID } = req.params;
 
   const product = await Product.findByIdAndUpdate(prodID, req.body, {
@@ -137,7 +137,7 @@ exports.updateProduct = catchError(async (req, res, next) => {
   });
 });
 
-exports.deleteProduct = catchError(async (req, res, next) => {
+export const deleteProduct = catchError(async (req, res, next) => {
   const { id: prodID } = req.params;
 
   const product = await Product.findByIdAndDelete(prodID);
