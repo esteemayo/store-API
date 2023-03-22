@@ -6,7 +6,6 @@ import hpp from 'hpp';
 import mongoSanitize from 'express-mongo-sanitize';
 import morgan from 'morgan';
 import compression from 'compression';
-import cors from 'cors';
 import xss from 'xss-clean';
 import hpp from 'hpp';
 import dotenv from 'dotenv';
