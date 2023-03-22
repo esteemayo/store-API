@@ -28,7 +28,7 @@ const sendErrorProd = (err, res) =>
     message: err.message,
   });
 
-const globalErrorHandler = (err, req, res, next) => {
+const errorHandlerMiddleware = (err, req, res, next) => {
   const customError = {
     statusCode: err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR,
     message:
