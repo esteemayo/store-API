@@ -8,6 +8,7 @@ import cors from 'cors';
 import xss from 'xss-clean';
 import hpp from 'hpp';
 import dotenv from 'dotenv';
+import 'colors';
 
 // routes
 import products from './routes/products.js';
