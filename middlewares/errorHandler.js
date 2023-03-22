@@ -34,6 +34,7 @@ const errorHandlerMiddleware = (err, req, res, next) => {
     message:
       err.message || 'Something went very wrong, please try again later!',
     stack: err.stack,
+    status: err.status,
   };
 
   if (err.name === 'CastError') handleCastErrorDB(customError, err);
