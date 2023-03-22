@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+import hpp from 'hpp';
+import mongoSanitize from 'express-mongo-sanitize';
 import morgan from 'morgan';
 import compression from 'compression';
 import cors from 'cors';
