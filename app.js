@@ -13,7 +13,7 @@ import 'colors';
 // routes
 import products from './routes/products.js';
 import NotFoundError from './errors/notFound.js';
-import globalErrorHandler from './middlewares/errorHandler.js';
+import errorHandleMiddlewarer from './middlewares/errorHandler.js';
 
 dotenv.config({ path: './config.env' });
 
