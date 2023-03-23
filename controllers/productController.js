@@ -144,7 +144,7 @@ export const updateProduct = catchError(async (req, res, next) => {
 });
 
 export const deleteProduct = catchError(async (req, res, next) => {
-  const { id: prodID } = req.params;
+  const { id: prodId } = req.params;
 
   const product = await Product.findByIdAndDelete(prodID);
 
