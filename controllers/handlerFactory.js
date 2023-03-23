@@ -2,6 +2,7 @@ import { StatusCodes } from 'http-status-codes';
 
 import catchError from '../utils/catchError.js';
 import APIFeatures from '../utils/apiFeatures.js';
+import catchError from '../utils/catchError.js';
 import NotFoundError from '../errors/notFound.js';
 
 export const getAll = (Model) =>
