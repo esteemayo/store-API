@@ -72,10 +72,14 @@ export const updateOne = (Model) =>
   catchError(async (req, res, next) => {
     const { id: docId } = req.params;
 
-    const doc = await Model.findByIdAndUpdate(docId, { $set: { ...req.body } }, {
-      new: true,
-      runValidators: true,
-    });
+    const doc = await Model.findByIdAndUpdate(
+      docId,
+      { $set: { ...req.body } },
+      {
+        new: true,
+        runValidators: true,
+      },
+    );
 
     if (!doc) {
       return next(
