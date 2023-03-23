@@ -44,7 +44,7 @@ export const getOneBySlug = (Model) =>
   catchError(async (req, res, next) => {
     const { slug } = req.params;
 
-    const doc = await Model.findOne({ slug: slug });
+    const doc = await Model.findOne({ slug });
 
     if (!doc) {
       return next(
