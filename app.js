@@ -6,8 +6,6 @@ import helmet from 'helmet';
 import compression from 'compression';
 import morgan from 'morgan';
 import mongoSanitize from 'express-mongo-sanitize';
-import morgan from 'morgan';
-import compression from 'compression';
 import xss from 'xss-clean';
 import dotenv from 'dotenv';
 import 'colors';
