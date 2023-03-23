@@ -83,7 +83,7 @@ export const getAllProducts = catchError(async (req, res, next) => {
 export const getProductById = catchError(async (req, res, next) => {
   const { id: prodId } = req.params;
 
-  const product = await Product.findById(prodID);
+  const product = await Product.findById(prodId);
 
   if (!product) {
     return next(new NotFoundError(`No product found with that ID: ${prodID}`));
