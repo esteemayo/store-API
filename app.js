@@ -14,6 +14,7 @@ import 'colors';
 import products from './routes/products.js';
 import NotFoundError from './errors/notFound.js';
 import errorHandleMiddlewarer from './middlewares/errorHandler.js';
+import NotFoundError from './errors/notFound.js';
 
 dotenv.config({ path: './config.env' });
 
