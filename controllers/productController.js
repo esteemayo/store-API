@@ -132,7 +132,9 @@ export const updateProduct = catchError(async (req, res, next) => {
   });
 
   if (!product) {
-    return next(new NotFoundError(`No product found with that ID: ${prodId}`));
+    return next(
+      new NotFoundError(`No product found with that ID: ${prodId}`)
+    );
   }
 
   res.status(StatusCodes.OK).json({
