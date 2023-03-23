@@ -26,7 +26,7 @@ export const getOneById = (Model) =>
   catchError(async (req, res, next) => {
     const { id: docId } = req.params;
 
-    const doc = await Model.findById(docID);
+    const doc = await Model.findById(docId);
 
     if (!doc) {
       return next(
