@@ -150,7 +150,7 @@ export const deleteProduct = catchError(async (req, res, next) => {
 
   if (!product) {
     return next(
-      new NotFoundError(`No product found with that ID: ${prodID}`, 404)
+      new NotFoundError(`No product found with that ID: ${prodId}`, 404)
     );
   }
 
