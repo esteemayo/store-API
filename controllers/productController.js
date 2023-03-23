@@ -126,7 +126,7 @@ export const createProduct = catchError(async (req, res, next) => {
 export const updateProduct = catchError(async (req, res, next) => {
   const { id: prodId } = req.params;
 
-  const product = await Product.findByIdAndUpdate(prodID, req.body, {
+  const product = await Product.findByIdAndUpdate(prodId, req.body, {
     new: true,
     runValidators: true,
   });
