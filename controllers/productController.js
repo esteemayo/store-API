@@ -100,7 +100,7 @@ export const getProductById = catchError(async (req, res, next) => {
 export const getProductBySlug = catchError(async (req, res, next) => {
   const { slug } = req.params;
 
-  const product = await Product.findOne({ slug: slug });
+  const product = await Product.findOne({ slug });
 
   if (!product) {
     return next(new NotFoundError(`No product found with that SLUG: ${slug}`));
