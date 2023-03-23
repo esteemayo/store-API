@@ -103,7 +103,9 @@ export const getProductBySlug = catchError(async (req, res, next) => {
   const product = await Product.findOne({ slug });
 
   if (!product) {
-    return next(new NotFoundError(`No product found with that SLUG: ${slug}`));
+    return next(
+      new NotFoundError(`No product found with that SLUG: ${slug}`)
+    );
   }
 
   res.status(StatusCodes.OK).json({
